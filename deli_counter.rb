@@ -1,4 +1,5 @@
 katz_deli = []
+ticket_number = 0
 
 def line(katz_deli)
   line = [ ]
@@ -12,10 +13,13 @@ def line(katz_deli)
   end
 end
 
-def take_a_number(katz_deli, name)
-  katz_deli.push(name)
-  puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
+def take_a_number(katz_deli)
+  ticket_number += 1
+  katz_deli.push(ticket_number)
+  puts "Welcome, you are number #{ticket_number}. "
 end
+
+
 
 def now_serving(katz_deli)
   if katz_deli.length == 0
